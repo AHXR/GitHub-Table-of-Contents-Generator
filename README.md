@@ -1,5 +1,5 @@
 # GitHub Table of Contents Markdown Generator
-![Preview](https://i.imgur.com/ZSPbYtB.png) ![Preview](https://i.imgur.com/P5ClDQk.png)
+![Preview](https://i.imgur.com/ZSPbYtB.png)
 
 ## Overview
 
@@ -12,9 +12,11 @@ This program can work with other types of GitHub marked files. Using this progra
 type in your project name into the first textbox and your username into the second textbook. Then select your .md file.
 
 The reasoning for putting in your project name and username is for the purpose of formatting your hyperlinks. The bottom
-far left button will allow you to change between numbers and bullets (see images above). 
+far left button will allow you to change between numbers and bullets (see images above & below). 
 
 ## Examples
+
+![Preview](https://i.imgur.com/P5ClDQk.png)
 
 I used my [Dreamstride YGOPro Archetype](https://github.com/AHXR/Dreamstride-YGOPro-) and [React VR by andrewimm](https://github.com/facebook/react-vr) to test this 
 program out. If you take a look at both of the respiratories, you can see that one is simple and the other one is complex.
