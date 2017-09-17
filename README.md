@@ -16,9 +16,9 @@ far left button will allow you to change between numbers and bullets (see images
 
 ## Examples
 
-![Preview](https://i.imgur.com/P5ClDQk.png)
+![Preview](https://i.imgur.com/faHge2T.png)
 
-I used my [Dreamstride YGOPro Archetype](https://github.com/AHXR/Dreamstride-YGOPro-) and [React VR by andrewimm](https://github.com/facebook/react-vr) to test this 
+I used my [Dreamstride YGOPro Archetype](https://github.com/AHXR/Dreamstride-YGOPro-) and [aframe by aframevr](https://github.com/aframevr/aframe) to test this 
 program out. If you take a look at both of the respiratories, you can see that one is simple and the other one is complex.
 Everything seems to format fine despite that design and complexity within someone's markdown.
 
@@ -35,17 +35,17 @@ Everything seems to format fine despite that design and complexity within someon
   * [Monsters](http://github.com/AHXR/Dreamstride-YGOPro-#monsters)
   * [Spells](http://github.com/AHXR/Dreamstride-YGOPro-#spells)
   
-### Example 2 (React VR)
+### Example 2 (aframe)
 
-1. [Features](http://github.com/facebook/react-vr#features)
-2. [Usage](http://github.com/facebook/react-vr#usage)
-  1. [Example](http://github.com/facebook/react-vr#example)
-  2. [Builds](http://github.com/facebook/react-vr#builds)
-  3. [npm](http://github.com/facebook/react-vr#npm)
-3. [Or yarn add aframe](http://github.com/facebook/react-vr#or-yarn-add-aframe)
-  1. [Local Development](http://github.com/facebook/react-vr#local-development)
-  2. [Generating Builds](http://github.com/facebook/react-vr#generating-builds)
-4. [Questions](http://github.com/facebook/react-vr#questions)
-  1. [Stay in Touch](http://github.com/facebook/react-vr#stay-in-touch)
-  2. [Contributing](http://github.com/facebook/react-vr#contributing)
-  3. [License](http://github.com/facebook/react-vr#license)
+1. [Features](http://github.com/aframevr/aframe#features)
+2. [Usage](http://github.com/aframevr/aframe#usage)
+  1. [Example](http://github.com/aframevr/aframe#example)
+  2. [Builds](http://github.com/aframevr/aframe#builds)
+  3. [npm](http://github.com/aframevr/aframe#npm)
+3. [Or yarn add aframe](http://github.com/aframevr/aframe#or-yarn-add-aframe)
+  1. [Local Development](http://github.com/aframevr/aframe#local-development)
+  2. [Generating Builds](http://github.com/aframevr/aframe#generating-builds)
+4. [Questions](http://github.com/aframevr/aframe#questions)
+  1. [Stay in Touch](http://github.com/aframevr/aframe#stay-in-touch)
+  2. [Contributing](http://github.com/aframevr/aframe#contributing)
+  3. [License](http://github.com/aframevr/aframe#license)
