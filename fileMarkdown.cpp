@@ -159,7 +159,7 @@ void readFileMarkdown(System::String^ projectName, System::String^ username) {
 
 		
 		std::transform(s_format.begin(), s_format.end(), s_format.begin(), ::tolower); // The URL format is always in lowercase.
-		s_tmp.insert(0, "["); s_tmp += "](http://github.com/" + marshal_as< std::string >(username) + "/" + marshal_as< std::string >(projectName) + "#" + s_format + ")";
+		s_tmp.insert(0, "["); s_tmp += "](https://github.com/" + marshal_as< std::string >(username) + "/" + marshal_as< std::string >(projectName) + "#" + s_format + ")";
 		s_stored.at(i).assign("* " + s_tmp); // Adding the asterick while I'm at it.
 	}
 
