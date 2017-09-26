@@ -16,28 +16,8 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 //-----------------------------------------------------------------
-#ifndef G_GLOBAL
-#define G_GLOBAL
+void initHistory();
+void addHistory(std::string path);
+bool fileExists(const std::string& filename);
 
-// #define SETTINGS_START_MESSAGE
-#define DEBUG_MODE
-
-#define MAX_HISTORY 10
-#define MAX_HEADER_COUNT 7
-#define HEADER_ONE_IDX 0
-#define HEADER_TWO_IDX 1
-#define HEADER_THREE_IDX 2
-#define HEADER_FOUR_IDX 3
-#define HEADER_FIVE_IDX 4
-#define HEADER_SIX_IDX 5
-#define START_MESSAGE "Here are all the lines we're assuming that you want to be listed in your table of contents: \r\n\r\n"
-#define FILE_HISTORY "history.txt"
-
-#include <string>
-
-extern std::string s_file;
-extern bool b_numbers;
-extern std::string getFilePath();
-extern void toggleNumberBullets();
-extern bool getNumberBullets();
-#endif
+extern std::fstream & fetchHistoryStream();

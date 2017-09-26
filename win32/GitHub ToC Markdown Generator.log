@@ -1,0 +1,16 @@
+﻿  fileMarkdown.cpp
+fileMarkdown.cpp(250): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+fileMarkdown.cpp(261): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  frmMain.cpp
+frmMain.cpp(68): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+frmMain.cpp(115): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  global.cpp
+  history.cpp
+  Generating Code...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  fileMarkdown.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  GitHub ToC Markdown Generator.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\GitHub ToC Markdown Generator\Debug\GitHub ToC Markdown Generator.exe
+  GitHub ToC Markdown Generator.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\GitHub ToC Markdown Generator\Debug\GitHub ToC Markdown Generator.pdb (Partial PDB)

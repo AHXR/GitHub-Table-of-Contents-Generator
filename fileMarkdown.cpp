@@ -64,7 +64,7 @@ void readFileMarkdown(System::String^ projectName, System::String^ username) {
 
 		Here we are checking and deleting any lines that seem to not be related to table of contents.
 	*/
-	for (int i = 0; i < MAX_HEADER_COUNT; i++) {
+	for (size_t i = 0; i < MAX_HEADER_COUNT; i++) {
 		if (i_header_count[i] < 2) {
 
 			/*
@@ -72,7 +72,7 @@ void readFileMarkdown(System::String^ projectName, System::String^ username) {
 				The program looks through the s_stored string and finds any lines that fall under that header then
 				deletes the line accordingly.
 			*/
-			for (int x = 0; x < s_stored.size(); x++) {
+			for (size_t x = 0; x < s_stored.size(); x++) {
 				if (getLineHeaderIndex(s_stored.at(x)) == i) {
 
 #ifdef DEBUG_MODE
@@ -96,7 +96,7 @@ void readFileMarkdown(System::String^ projectName, System::String^ username) {
 	int i_pos;
 
 	// Looping through the original s_stored string.
-	for (int i = 0; i < s_stored.size(); i++) {
+	for (size_t i = 0; i < s_stored.size(); i++) {
 		i_pos = 0;
 
 		/*
@@ -107,7 +107,7 @@ void readFileMarkdown(System::String^ projectName, System::String^ username) {
 			Each time the condition found a hashtag or a space, it added more to the counter.
 			This gave me the perfect position to substring what was stored at the element cell.
 		*/
-		for (int x = 0; x < MAX_HEADER_COUNT; x++) {
+		for (size_t x = 0; x < MAX_HEADER_COUNT; x++) {
 			if (s_stored.at(i)[x] != '#' && s_stored.at(i)[x] != ' ')
 				break;
 			i_pos++;
@@ -128,7 +128,7 @@ void readFileMarkdown(System::String^ projectName, System::String^ username) {
 			b_check = false;
 
 		// Looping through the strength and finding any illegal characters.
-		for (int i = 0; i < s_format.length(); i++) {
+		for (size_t i = 0; i < s_format.length(); i++) {
 
 			/*
 				I thought this would be much easier because I can just use string::replace on the illegal
@@ -170,7 +170,7 @@ void readFileMarkdown(System::String^ projectName, System::String^ username) {
 	*/
 	bool
 		i_cont = false;
-	for (int i = 0; i < s_old.size() - 1; i++) {
+	for (size_t i = 0; i < s_old.size() - 1; i++) {
 		if (!i_cont) {
 			if (getLineHeaderIndex(s_old.at(i)) > getLineHeaderIndex(s_old.at(i + 1))) {
 				s_stored.at(i).insert(0, "  ");
@@ -223,7 +223,7 @@ bool numberFileMarkdown() {
 	int i_list_spot[2] = { 0, 0 };
 	bool b_sublisting;
 
-	for (int i = 0; i < s_stored.size(); i++) {
+	for (size_t i = 0; i < s_stored.size(); i++) {
 		if (s_stored.at(i)[0] == '*') { // Outside List
 			
 			/* 

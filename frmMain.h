@@ -59,10 +59,11 @@ namespace GitHubToCMarkdownGenerator {
 	private:
 
 	private:
-	protected:
 
 	private: System::Windows::Forms::GroupBox^  grpBoxCode;
 	public: static System::Windows::Forms::RichTextBox^  txtCode;
+	private:
+
 	private:
 
 	private:
@@ -75,9 +76,27 @@ namespace GitHubToCMarkdownGenerator {
 	private:
 
 
+	private:
+
+
 
 	private: System::Windows::Forms::Label^  lblAuthor;
 	private: System::Windows::Forms::Button^  btnRefresh;
+	private: System::Windows::Forms::MenuStrip^  menuStrip1;
+	public: static System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
+	private:
+	public: static System::Windows::Forms::ToolStripMenuItem^  historyToolStripMenuItem;
+	public: static System::Windows::Forms::ToolStripMenuItem^  exitToolStripMenuItem;
+
+	private:
+
+
+
+	private:
+
+
+
+
 
 
 	private:
@@ -103,12 +122,17 @@ namespace GitHubToCMarkdownGenerator {
 			this->txtUsername = (gcnew System::Windows::Forms::TextBox());
 			this->lblAuthor = (gcnew System::Windows::Forms::Label());
 			this->btnRefresh = (gcnew System::Windows::Forms::Button());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->historyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->exitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->grpBoxCode->SuspendLayout();
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// btnOpen
 			// 
-			this->btnOpen->Location = System::Drawing::Point(13, 13);
+			this->btnOpen->Location = System::Drawing::Point(9, 32);
 			this->btnOpen->Name = L"btnOpen";
 			this->btnOpen->Size = System::Drawing::Size(518, 47);
 			this->btnOpen->TabIndex = 0;
@@ -127,7 +151,7 @@ namespace GitHubToCMarkdownGenerator {
 			// grpBoxCode
 			// 
 			this->grpBoxCode->Controls->Add(this->txtCode);
-			this->grpBoxCode->Location = System::Drawing::Point(13, 66);
+			this->grpBoxCode->Location = System::Drawing::Point(9, 85);
 			this->grpBoxCode->Name = L"grpBoxCode";
 			this->grpBoxCode->Size = System::Drawing::Size(518, 232);
 			this->grpBoxCode->TabIndex = 1;
@@ -144,7 +168,7 @@ namespace GitHubToCMarkdownGenerator {
 			// 
 			// btnNumbersBullets
 			// 
-			this->btnNumbersBullets->Location = System::Drawing::Point(13, 305);
+			this->btnNumbersBullets->Location = System::Drawing::Point(9, 324);
 			this->btnNumbersBullets->Name = L"btnNumbersBullets";
 			this->btnNumbersBullets->Size = System::Drawing::Size(59, 41);
 			this->btnNumbersBullets->TabIndex = 2;
@@ -154,7 +178,7 @@ namespace GitHubToCMarkdownGenerator {
 			// 
 			// txtProjectName
 			// 
-			this->txtProjectName->Location = System::Drawing::Point(163, 304);
+			this->txtProjectName->Location = System::Drawing::Point(159, 323);
 			this->txtProjectName->Name = L"txtProjectName";
 			this->txtProjectName->Size = System::Drawing::Size(362, 20);
 			this->txtProjectName->TabIndex = 3;
@@ -162,7 +186,7 @@ namespace GitHubToCMarkdownGenerator {
 			// 
 			// txtUsername
 			// 
-			this->txtUsername->Location = System::Drawing::Point(163, 330);
+			this->txtUsername->Location = System::Drawing::Point(159, 349);
 			this->txtUsername->Name = L"txtUsername";
 			this->txtUsername->Size = System::Drawing::Size(207, 20);
 			this->txtUsername->TabIndex = 4;
@@ -171,7 +195,7 @@ namespace GitHubToCMarkdownGenerator {
 			// lblAuthor
 			// 
 			this->lblAuthor->AutoSize = true;
-			this->lblAuthor->Location = System::Drawing::Point(431, 330);
+			this->lblAuthor->Location = System::Drawing::Point(427, 349);
 			this->lblAuthor->Name = L"lblAuthor";
 			this->lblAuthor->Size = System::Drawing::Size(94, 13);
 			this->lblAuthor->TabIndex = 5;
@@ -179,7 +203,7 @@ namespace GitHubToCMarkdownGenerator {
 			// 
 			// btnRefresh
 			// 
-			this->btnRefresh->Location = System::Drawing::Point(78, 305);
+			this->btnRefresh->Location = System::Drawing::Point(74, 324);
 			this->btnRefresh->Name = L"btnRefresh";
 			this->btnRefresh->Size = System::Drawing::Size(60, 41);
 			this->btnRefresh->TabIndex = 6;
@@ -187,11 +211,45 @@ namespace GitHubToCMarkdownGenerator {
 			this->btnRefresh->UseVisualStyleBackColor = true;
 			this->btnRefresh->Click += gcnew System::EventHandler(this, &frmMain::btnRefresh_Click);
 			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->fileToolStripMenuItem });
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(537, 24);
+			this->menuStrip1->TabIndex = 7;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->historyToolStripMenuItem,
+					this->exitToolStripMenuItem
+			});
+			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
+			this->fileToolStripMenuItem->Size = System::Drawing::Size(35, 20);
+			this->fileToolStripMenuItem->Text = L"File";
+			// 
+			// historyToolStripMenuItem
+			// 
+			this->historyToolStripMenuItem->Name = L"historyToolStripMenuItem";
+			this->historyToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->historyToolStripMenuItem->Text = L"History";
+			this->historyToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &frmMain::historyToolStripMenuItem_DropDownItemClicked);
+			this->historyToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmMain::historyToolStripMenuItem_Click);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->exitToolStripMenuItem->Text = L"Exit";
+			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmMain::exitToolStripMenuItem_Click);
+			// 
 			// frmMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(543, 358);
+			this->ClientSize = System::Drawing::Size(537, 387);
 			this->Controls->Add(this->btnRefresh);
 			this->Controls->Add(this->lblAuthor);
 			this->Controls->Add(this->txtUsername);
@@ -199,10 +257,15 @@ namespace GitHubToCMarkdownGenerator {
 			this->Controls->Add(this->btnNumbersBullets);
 			this->Controls->Add(this->grpBoxCode);
 			this->Controls->Add(this->btnOpen);
+			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"frmMain";
 			this->Text = L"GitHub Table of Contents Markdown Generator";
+			this->Load += gcnew System::EventHandler(this, &frmMain::frmMain_Load);
 			this->grpBoxCode->ResumeLayout(false);
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -226,5 +289,21 @@ private: System::Void btnNumbersBullets_Click(System::Object^  sender, System::E
 		else
 			this->btnNumbersBullets->Text = "Numbers";
 	}
+private: System::Void frmMain_Load(System::Object^  sender, System::EventArgs^  e) {
+		loadHistory();
+	}
+private: System::Void historyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void historyToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+		for each(ToolStripMenuItem^ item in this->historyToolStripMenuItem->DropDownItems) {
+			if (item->Selected) {
+				loadMarkdownGUI(item->Text);
+				break;
+			}
+		}
+	}
+private: System::Void exitToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	Application::Exit();
+}
 };
 }
